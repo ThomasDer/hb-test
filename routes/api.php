@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/customers', [CustomerController::class, 'get']);
+Route::get('/customers', [CustomerController::class, 'getCustomers']);
+Route::get('/customers/visits', [CustomerController::class, 'getCustomersVisits']);
+Route::get('/customers/{customer}', [CustomerController::class, 'getCustomer']);
+Route::patch('/customers/{customer}/has-optin', [CustomerController::class, 'updateHasOptin']);
